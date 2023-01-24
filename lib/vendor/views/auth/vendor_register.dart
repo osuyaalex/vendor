@@ -1,4 +1,5 @@
 import 'package:country_state_city_picker/country_state_city_picker.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -295,6 +296,10 @@ class _VendorRegisterScreenState extends State<VendorRegisterScreen> {
                           ),
                         ),
                       ),
+                    ),
+                    TextButton(onPressed: ()async{
+                      await FirebaseAuth.instance.signOut();
+                    }, child: Text('data')
                     )
                   ],
                 ),

@@ -4,11 +4,11 @@ class VendorUserModels{
   final String? city;
   final String? country;
   final String? email;
-  final String? phoneNo;
+  final String? phoneNumber;
   final String? state;
-  final String? storeImage;
+  final String? image;
   final String? taxNumber;
-  final String? taxRegister;
+  final String? taxOptions;
 
   VendorUserModels(
       {
@@ -17,38 +17,40 @@ class VendorUserModels{
         required this.city,
         required this.country,
         required this.email,
-        required this.phoneNo,
+        required this.phoneNumber,
         required this.state,
-        required this.storeImage,
+        required this.image,
         required this.taxNumber,
-        required this.taxRegister
+        required this.taxOptions
       }
       );
   VendorUserModels.fromJson(Map<String, Object?> json):
         this(
-        approved: json['approved']! as bool,
-        businessName: json['businessName']! as String,
-        city: json['city']! as String,
-        country: json['country']! as String,
-        email: json['email']! as String,
-        phoneNo: json['phoneNo']! as String,
-        state: json['state']! as String,
-        storeImage: json['storeImage']! as String,
-        taxNumber: json['taxNumber']! as String,
-        taxRegister: json['taxRegister'] as String,
+        approved: json['approved'] as bool?,
+        businessName: json['businessName'] as String?,
+        city: json['city'] as String?,
+        country: json['country'] as String?,
+        email: json['email'] as String?,
+        phoneNumber: json['phoneNumber'] as String?,
+        state: json['state'] as String?,
+        image: json['image'] as String?,
+        taxNumber: json['taxNumber'] as String?,
+        taxOptions: json['taxOptions'] as String?,
       );
   Map<String, Object?>toJson(){
     return{
       'businessName': businessName,
       'email':email,
-      'phone number': phoneNo,
+      'phoneNumber': phoneNumber,
       'country': country,
       'state':state,
       'city': city,
-      'tax options': taxRegister,
-      'tax number': taxNumber,
-      'image': storeImage,
+      'taxOptions': taxOptions,
+      'taxNumber': taxNumber,
+      'image': image,
       'approved':approved
     };
   }
 }
+// in order for this to work effectively, the variable names must be the same as the names you are trying to
+//map them to

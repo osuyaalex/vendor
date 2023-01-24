@@ -34,12 +34,12 @@ class VendorController{
             {
               'businessName': businessName,
               'email':email,
-              'phone number': phoneNo,
+              'phoneNumber': phoneNo,
               'country': countryValue,
               'state':stateValue,
               'city': cityValue,
-              'tax options': taxValue,
-              'tax number': taxNumber,
+              'taxOptions': taxValue,
+              'taxNumber': taxNumber,
               'image': storeImage,
               'approved':false
             }
